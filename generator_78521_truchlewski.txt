@@ -1,0 +1,23 @@
+import string
+import random
+
+characters = list(string.ascii_letters + string.digits + "[email protected]#$%^&*()")
+
+def generate_random_password():
+	length = 12
+
+	random.shuffle(characters)
+	
+	password = []
+	for i in range(length):
+		password.append(random.choice(characters))
+
+	random.shuffle(password)
+
+	print("".join(password))
+
+generate_random_password()
+
+#funkcja generujaca losowe haslo 12 znakow(cyfry, litery male duze, znaki specjalne)
+#https://www.programiz.com/python-programming/online-compiler/
+#https://replit.com/languages/python3
